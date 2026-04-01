@@ -1,47 +1,28 @@
 "use client"
 import React from 'react'
-import { TbTruckDelivery } from "react-icons/tb"
+import { TbTruckDelivery, TbCurrentLocation } from "react-icons/tb"
 import { FaBoxOpen } from "react-icons/fa"
-import { TbCurrentLocation } from "react-icons/tb"
 import { BsLightningChargeFill } from "react-icons/bs"
 import { motion } from "framer-motion"
 
 const services = [
-  {
-    icon: <TbTruckDelivery size={34} />,
-    title: "Same Day Delivery",
-    desc: "Get your packages delivered the same day."
-  },
-  {
-    icon: <FaBoxOpen size={34} />,
-    title: "Parcel Delivery",
-    desc: "Safe and secure parcel handling."
-  },
-  {
-    icon: <TbCurrentLocation size={34} />,
-    title: "Real-Time Tracking",
-    desc: "Know where your package is at all times."
-  },
-  {
-    icon: <BsLightningChargeFill size={34} />,
-    title: "Express Delivery",
-    desc: "Priority delivery for urgent packages."
-  }
+  { icon: TbTruckDelivery, title: "Same Day Delivery", desc: "Get your packages delivered the same day." },
+  { icon: FaBoxOpen, title: "Parcel Delivery", desc: "Safe and secure parcel handling." },
+  { icon: TbCurrentLocation, title: "Real-Time Tracking", desc: "Know where your package is at all times." },
+  { icon: BsLightningChargeFill, title: "Express Delivery", desc: "Priority delivery for urgent packages." }
 ]
 
 const Services = () => {
 
-  // Parent container variant for stagger
   const container = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.2 // each child appears 0.2s after the previous
+        staggerChildren: 0.2
       }
     }
   }
 
-  // Each card animation
   const card = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -56,21 +37,24 @@ const Services = () => {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.3 }} // animate when 30% visible
+        viewport={{ once: true, amount: 0.3 }}
       >
-        {services.map((service, i) => (
-          <motion.div
-            key={i}
-            variants={card}
-            className='backdrop-blur-md bg-[#FFD600]/30 border border-[#FFD600]/40 rounded-2xl shadow-lg text-[#0E2470] text-lg mb-2 p-10 hover:scale-105 transition-transform duration-300 ease-in-out text-center'
-          >
-            <div className='flex items-center justify-center text-[#1D4DB5] mb-4'>
-              {service.icon}
-            </div>
-            <h3 className='text-xl font-bold mb-4'>{service.title}</h3>
-            <p className='text-gray-500'>{service.desc}</p>
-          </motion.div>
-        ))}
+        {services.map((service, i) => {
+          const Icon = service.icon
+          return (
+            <motion.div
+              key={i}
+              variants={card}
+              className='backdrop-blur-md bg-[#FFD600]/30 border border-[#FFD600]/40 rounded-2xl shadow-lg text-[#0E2470] text-lg mb-2 p-10 hover:scale-105 transition-transform duration-300 ease-in-out text-center'
+            >
+              <div className='flex items-center justify-center text-[#1D4DB5] mb-4'>
+                <Icon size={34} />
+              </div>
+              <h3 className='text-xl font-bold mb-4'>{service.title}</h3>
+              <p className='text-gray-500'>{service.desc}</p>
+            </motion.div>
+          )
+        })}
       </motion.div>
     </section>
   )

@@ -47,7 +47,6 @@ useEffect(() => {
 }
 
   return (
-    // <Protected>
 
     <div className='min-h-screen bg-[#1D4DB5]/30 p-20'>
       <Shipmentable 
@@ -58,7 +57,6 @@ useEffect(() => {
         showButton={true}
       />
     </div>
-    // </Protected>
   )
 }
 

@@ -78,10 +78,9 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
             </tbody>
           </table>
 
-          {/* Modal */}
           {selectedShipment && (
             <EditModal
-              newStatus={newStatus} // ✅ current status
+              newStatus={newStatus} // current status
               setNewStatus={setNewStatus}
               selectedShipment={selectedShipment}
               setSelectedShipment={setSelectedShipment}
