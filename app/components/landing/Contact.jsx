@@ -71,16 +71,9 @@ const Contact = ({ formData, setFormData, handleSubmit, submitted, loading}) => 
           disabled={loading}
           className="bg-[#1D4DB5] text-white py-3 rounded-lg font-bold hover:bg-[#163a91] transition"
         >
-          {loading && (
-            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-          )}
 
-          {loading ? "Sending" : "Send Message"}
+          {loading ? <span className="animate-pulse"> "Sending..."</span> : "Send Message"}
         </button>
-
-        {submitted && (
-          <p className="text-green-500 text-center mt-2">Message sent successfully!</p>
-        )}
       </motion.form>
     </motion.div>
   )

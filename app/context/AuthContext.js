@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
     return () => subscription.unsubscribe()
   }, [])
 
-  // ✅ LOGIN
+  // LOGIN
   const login = async (email, password) => {
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -41,17 +41,8 @@ export const AuthProvider = ({ children }) => {
     return { success: !error, error }
   }
 
-  // ✅ SIGNUP (optional)
-  const signup = async (email, password) => {
-    const { error } = await supabase.auth.signUp({
-      email,
-      password
-    })
 
-    return { success: !error, error }
-  }
-
-  // ✅ LOGOUT
+  // LOGOUT
   const logout = async () => {
     await supabase.auth.signOut()
   }
@@ -63,8 +54,8 @@ export const AuthProvider = ({ children }) => {
         user,
         isLoggedIn: !!session,
         loading,
+        setLoading,
         login,
-        signup,
         logout
       }}
     >

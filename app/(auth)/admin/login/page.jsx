@@ -12,6 +12,7 @@ const page = () => {
 
   const { login } = useAuth();
   const router = useRouter()
+  const { loading, setLoading} = useAuth();
 
   const handleChange = (e) => {
   const { name, value } = e.target
@@ -23,6 +24,8 @@ const page = () => {
 
   const handleLogin = async (e) => {
   e.preventDefault();
+
+  setLoading(true)
 
     if (!loginData.email || !loginData.password) {
       alert("Email & Password is required")
@@ -41,7 +44,7 @@ const page = () => {
     return (
       <div className='bg-[#1D4DB5]/30 h-screen w-full'>
       <div className='max-w-360 mx-auto w-full flex justify-center items-center h-screen px-6'>
-        <form onSubmit={handleLogin} className='w-full max-w-180 mx-auto  bg-white p-4 rounded-2xl '>
+        <form onSubmit={handleLogin} className='w-full max-w-180 mx-auto  bg-white p-4 md:p-10 rounded-2xl '>
           <Image 
             src='/images/SwiftLogo.png'
             alt="logo"
@@ -73,7 +76,9 @@ const page = () => {
           </div>
 
           
-          <button className='text-white font-medium w-full bg-[#1D4DB5]  hover:bg-blue-700  p-4 mt-6 rounded cursor-pointer text-sm md:text-base'>Sign In</button>
+          <button disabled={loading} className='text-white font-medium w-full bg-[#1D4DB5]  hover:bg-blue-700  p-4 mt-6 rounded cursor-pointer text-sm md:text-base'>
+              {loading ?  <span className="animate-pulse">Signing in...</span> : "Sign In"}
+          </button>
          
 
 

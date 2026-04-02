@@ -7,6 +7,7 @@ import Protected from "../components/admin/Protected"
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 
 
@@ -18,7 +19,9 @@ export default function AdminLayout({ children }) {
 
   const handleLogout = () => {
     logout();
+    toast.success("Logout successfully.")
     router.push('/admin/login')
+
   }
   return (
     <Protected>
@@ -47,7 +50,7 @@ export default function AdminLayout({ children }) {
           <>
             <div className="bg-black/40 fixed inset-0 backdrop-blur-md z-20"
                 onClick={() => setIsOpen(false)}></div>
-            <div className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg z-70 flex flex-col p-6 space-y-14 text-xl items-start text-[#0E2470] uppercase font-bold">
+            <div className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg z-70 flex flex-col p-6 space-y-14 text-xl items-start text-[#0E2470] hover:text-red-700 uppercase font-bold">
               <button 
                   onClick={() => setIsOpen(false)} 
                   className="self-end text-[#0E2470]"

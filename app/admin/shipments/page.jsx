@@ -1,6 +1,8 @@
 "use client"
+import toast from 'react-hot-toast'
 import Shipmentable from '../../components/admin/Shipmentable'
 import { useEffect, useState } from 'react'
+import { data } from 'react-router-dom'
 
 const Page = () => {
   const [shipments, setShipments] = useState([])
@@ -33,21 +35,29 @@ const Page = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
       })
+      toast.success("Status updated successfully")
       if (res.ok) fetchShipments(page)
     } catch (err) {
       console.error("Failed to update shipment:", err)
+      toast.error("Failed to update this shipment", err.message)
     }
   }
 
   // Delete shipment
   const handleDelete = async (trackingId) => {
+    const isConfirmed = window.confirm("Are you sure you want to delete this shipment?")
+
+    if(!isConfirmed) return;
+    
     try {
       const res = await fetch(`/api/shipments/${trackingId}`, { method: "DELETE" })
       const data = await res.json()
-      console.log("Delete response:", data, "Status:", res.status)
+      toast.success("Shipment deleted")
+      
       fetchShipments(page)
     } catch (err) {
       console.error("Failed to delete shipment:", err)
+      toast.error("Failed to delete this shipment", err.message)
     }
   }
 
@@ -62,7 +72,7 @@ const Page = () => {
       />
 
       {/* Pagination controls */}
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-between mt-4 max-w-280 mx-auto">
         <button
           onClick={() => setPage(prev => Math.max(prev - 1, 1))}
           disabled={page === 1}

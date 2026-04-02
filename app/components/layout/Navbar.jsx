@@ -23,11 +23,11 @@ const Navbar = ({ type = "user" }) => {
 
         {/* Desktop Links */}
         <div className="space-x-6 lg:space-x-10 text-2xl font-bold hidden md:flex items-center">
-          <Link href="/">Home</Link>
-          <Link href="#services" className="md:hidden lg:block">Services</Link>
-          <Link href="#about" className="md:hidden lg:block">About US</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/track" className="bg-[#0E2470] text-white p-2 rounded">
+          <Link href="/" className="hover:text-red-700">Home</Link>
+          <Link href="#services" className="md:hidden lg:block hover:text-red-700">Services</Link>
+          <Link href="#about" className="md:hidden lg:block hover:text-red-700">About US</Link>
+          <Link href="/contact" className="hover:text-red-700">Contact</Link>
+          <Link href="/track" className="bg-[#0E2470]  hover:bg-blue-900 text-white p-2 rounded">
             Track Delivery
           </Link>
         </div>
@@ -56,15 +56,15 @@ const Navbar = ({ type = "user" }) => {
               <X size={28} />
             </button>
           
-          <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="#services" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link href="#about" onClick={() => setIsOpen(false)}>About US</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-red-700">Home</Link>
+          <Link href="#services" onClick={() => setIsOpen(false)} className="hover:text-red-700">Services</Link>
+          <Link href="#about" onClick={() => setIsOpen(false)} className="hover:text-red-700">About US</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-red-700">Contact</Link>
           
           <Link 
             href="/track" 
             onClick={() => setIsOpen(false)}
-            className="bg-[#1D4DB5] text-white p-2 rounded text-center"
+            className="bg-[#1D4DB5] hover:bg-blue-700 text-white p-2 rounded text-center"
           >
             Track Delivery
           </Link>

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Contact from '../../components/landing/Contact'
+import toast from 'react-hot-toast'
 
 const page = () => {
 
@@ -26,7 +27,7 @@ const page = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("Message sent successfully");
+        toast.success("Message sent successfully");
 
         setSubmitted(true)
 
@@ -37,7 +38,7 @@ const page = () => {
         });
 
       } else {
-        alert(data.error || "Something went wrong")
+       toast.error(data.error || "Something went wrong")
       }
       
     } catch (error) {

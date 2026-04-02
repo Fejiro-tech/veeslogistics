@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import CreateShipmentForm from '../../components/admin/CreateShipmentForm'
 import { useRouter } from 'next/navigation'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Page = () => {
   const router = useRouter();
@@ -32,9 +33,11 @@ const Page = () => {
       if (!res.ok) throw new Error(`HTTP error: ${res.status}`)
 
       await res.json();
+      toast.success("Shipment created successfully!")
       router.push("/admin/shipments")     
     } catch (err) {
       console.error("Failed to create shipment:", err.message)
+      toast.error(`Failed to create shipment: ${err.message}`)
     }
   }
 
