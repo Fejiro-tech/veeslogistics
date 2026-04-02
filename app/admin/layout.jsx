@@ -42,31 +42,33 @@ export default function AdminLayout({ children }) {
 
             <button onClick={handleLogout} className="text-lg font-bold text-red-500 hover:text-red-400 cursor-pointer hidden md:block">Logout</button>
           </div>
+
+          {isOpen && (
+          <>
+            <div className="bg-black/40 fixed inset-0 backdrop-blur-md z-20"
+                onClick={() => setIsOpen(false)}></div>
+            <div className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg z-70 flex flex-col p-6 space-y-14 text-xl items-start text-[#0E2470] uppercase font-bold">
+              <button 
+                  onClick={() => setIsOpen(false)} 
+                  className="self-end text-[#0E2470]"
+                >
+                  <X size={28} />
+                </button>
               
-          <main className="ml-0 md:ml-52 lg:ml-64 mt-12 min-h-screen">{children}</main>
+              <Link href="/admin" onClick={() => setIsOpen(false)}>Overview</Link>
+              <Link href="/admin/shipments" onClick={() => setIsOpen(false)}>Shipments</Link>
+              <Link href="/admin/create" onClick={() => setIsOpen(false)}>Create Shipments</Link>
+
+              <button onClick={handleLogout} className="text-xl uppercase font-bold text-red-500 hover:text-red-400 cursor-pointer">Logout</button>
+              
+            </div>
+          </>
+        )}
+              
+          <main className="ml-0 md:ml-52 lg:ml-64 mt-12 min-h-screen bg-[#1D4DB5]/30">{children}</main>
         </div>
 
-        {isOpen && (
-        <>
-        <div className="bg-black/40 fixed inset-0 backdrop-blur-md "
-            onClick={() => setIsOpen(false)}></div>
-        <div className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg z-70 flex flex-col p-6 space-y-14 text-xl items-start text-[#0E2470] uppercase font-bold">
-           <button 
-              onClick={() => setIsOpen(false)} 
-              className="self-end text-[#0E2470]"
-            >
-              <X size={28} />
-            </button>
-          
-          <Link href="/admin" onClick={() => setIsOpen(false)}>Overview</Link>
-          <Link href="/admin/shipments" onClick={() => setIsOpen(false)}>Shipments</Link>
-          <Link href="/admin/create" onClick={() => setIsOpen(false)}>Create Shipments</Link>
-
-          <button onClick={handleLogout} className="text-xl uppercase font-bold text-red-500 hover:text-red-400 cursor-pointer">Logout</button>
-          
-        </div>
-        </>
-      )}
+        
       </div>
     </Protected>
 
