@@ -2,7 +2,6 @@
 import toast from 'react-hot-toast'
 import Shipmentable from '../../components/admin/Shipmentable'
 import { useEffect, useState } from 'react'
-import { data } from 'react-router-dom'
 
 const Page = () => {
   const [shipments, setShipments] = useState([])
