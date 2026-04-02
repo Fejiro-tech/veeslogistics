@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Hero />
-      <div className="pt-14 md:pt-24 px-8 ">
+      <div className="md:pt-24 px-12 ">
         <Services />
       </div>
       <About />

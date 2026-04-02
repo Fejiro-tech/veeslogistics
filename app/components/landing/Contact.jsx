@@ -27,15 +27,15 @@ const Contact = ({ formData, setFormData, handleSubmit, submitted, loading}) => 
       viewport={{ once: true, amount: 0.3 }}
       variants={container}
     >
-      <motion.h1 variants={section} className="text-4xl sm:text-5xl font-bold text-[#0E2470] mb-8 text-center">
+      <motion.h1 variants={section} className="text-3xl md:text-4xl font-bold text-[#0E2470] mb-4 text-center">
         Contact Us
       </motion.h1>
 
-      <motion.p variants={section} className="text-gray-700 text-center mb-10">
+      <motion.p variants={section} className="text-gray-700 text-center mb-10 text-sm md:text-base">
         Have questions or need help with a shipment? Fill out the form below and we'll get back to you as soon as possible.
       </motion.p>
 
-      <motion.form variants={section} onSubmit={handleSubmit} className="flex flex-col gap-6 bg-white shadow-lg p-8 rounded-xl">
+      <motion.form variants={section} onSubmit={handleSubmit} className="flex flex-col gap-6 bg-white shadow-lg p-4 rounded-xl">
         <input 
           type="text" 
           name="name" 

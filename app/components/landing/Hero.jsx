@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-start lg:items-center bg-gray-50 overflow-hidden px-4 sm:px-6 lg:px-12 pt-24">
+    <section className="relative min-h-screen flex items-start lg:items-center bg-gray-50 overflow-hidden px-4 sm:px-6 lg:px-12 pt-16 md:pt-24">
 
       {/* Background */}
       <Image
@@ -26,25 +26,25 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-[40%] lg:flex flex-col lg:min-h-145"
         >
-          <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#0E2470] uppercase leading-tight text-nowrap">
+          <div className="flex-1 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#0E2470] uppercase leading-tight text-nowrap">
               Swift <span>logistics</span>
             </h1>
 
-            <p className="text-gray-700 text-base sm:text-lg max-w-md mt-4">
+            <p className="text-gray-700 text-base sm:text-lg max-w-md mt-">
               Delivering trust, one package at a time.
             </p>
 
             <div>
               <Link
                 href="/track"
-                className="inline-block bg-[#0E2470] text-white px-6 py-3 rounded-lg mt-6 hover:bg-[#163a91] transition font-semibold"
+                className="inline-block bg-[#0E2470] text-sm md:text-base text-white px-6 py-3 rounded-lg mt-12 lg:mt-6 hover:bg-[#163a91] transition font-semibold"
               >
                 Track Your Delivery
               </Link>
             </div>
 
-            <p className="text-gray-500 mt-2">
+            <p className="text-gray-500 mt-4 text-sm md:text-base">
               Trusted by <span className="font-bold">10,000</span>+ customers
             </p>
           </div>

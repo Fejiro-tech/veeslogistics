@@ -10,20 +10,20 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
 
   return (
     <div className='pt-10'>
-      <div className='bg-white max-w-6xl mx-auto py-10 px-10 rounded-2xl shadow-xl  '>
+      <div className='bg-white max-w-6xl mx-auto py-10 px-4 md:px-10 rounded-2xl shadow-xl  '>
         <div className='flex justify-between mb-4'>
-          <h1 className=' mb-6 text-[#0E2470] font-bold text-xl'>{title}</h1>
+          <h1 className=' mb-6 text-[#0E2470] font-bold text-base md:text-xl'>{title}</h1>
           <Link href="/admin/shipments" className='font-medium'>
-            <button className='text-red-500 hover:text-yellow-400 rounded font-bold underline'>
+            <button className='text-red-500 hover:text-yellow-400 text-sm md:text-base rounded font-bold underline'>
               {buttonText}
             </button>
           </Link>
         </div>
 
-        <div className='overflow-x-auto scrollbar-thin'>
-          <table className='min-w-175 md:w-full whitespace-nowrap'>
+        <div className='overflow-x-auto custom-scrollbar'>
+          <table className='min-w-175 md:w-full whitespace-nowrap '>
             <thead>
-              <tr className='text-left text-[#0E2470] border-b border-gray-300'>
+              <tr className='text-left text-[#0E2470] text-base md:text-lg border-b border-gray-300'>
                 <th className='pb-3 pr-10'>Tracking ID</th>
                 <th className='pb-3 pr-10'>Sender</th>
                 <th className='pb-3 pr-10'>Receiver</th>
@@ -34,7 +34,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
             </thead>
             <tbody>
               {shipments.map((shipment, idx) => (
-                <tr key={idx}>
+                <tr key={idx} className='text-sm md:text-base'>
                   <td className='py-3 pr-10'>{shipment.trackingId}</td>
                   <td className='py-3 pr-10'>{shipment.sender.name}</td>
                   <td className='py-3 pr-10'>{shipment.receiver.name}</td>
@@ -55,7 +55,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
                           className='border border-blue-300 bg-blue-200 rounded px-4'
                           onClick={() => {
                             setSelectedShipment(shipment)
-                            setNewStatus(shipment.status) //  prefill dropdown
+                            setNewStatus(shipment.status) // prefill dropdown
                           }}
                         >
                           Edit

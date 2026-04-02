@@ -10,14 +10,8 @@ const Navbar = ({ type = "user" }) => {
   return (
     <nav className="w-full fixed top-0 right-0 z-50">
       
-      <div className={`flex justify-between items-center py-2 px-8  lg:px-12 rounded 
+      <div className={`flex justify-between items-center py-2 px-4  lg:px-12 rounded 
         ${type === "user" ? "bg-white text-[#0E2470] border-b border-b-[#1D4DB5]" : "bg-[#1D4DB5] text-white"}`}>
-
-        {/* Logo */}
-        {/* <h1 className={`text-3xl md:text-5xl font-bold 
-          ${type === "user" ? "text-[#1D4DB5]" : "text-white"}`}>
-          [Logo]
-        </h1> */}
 
         <Image 
         src='/images/SwiftLogo.png'
@@ -40,13 +34,13 @@ const Navbar = ({ type = "user" }) => {
 
         {/* Mobile Button */}
         <button 
-  onClick={() => setIsOpen(!isOpen)} 
-  className={`block md:hidden ${
-    type === "user" ? "text-[#1D4DB5]" : "text-white"
-  }`}
->
-  {isOpen ? <X size={28} /> : <Menu size={28} />}
-</button>
+          onClick={() => setIsOpen(!isOpen)} 
+          className={`block md:hidden ${
+            type === "user" ? "text-[#0E2470]" : "text-white"
+          }`}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
       {/* Mobile Menu */}

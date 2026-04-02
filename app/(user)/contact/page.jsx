@@ -50,7 +50,7 @@ const page = () => {
   }
   
   return (
-    <div className='py-20'>
+    <div className='py-10 md:py-16 px-4'>
         <Contact 
           formData={formData}
           setFormData={setFormData}

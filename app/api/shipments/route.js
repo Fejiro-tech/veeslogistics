@@ -1,15 +1,37 @@
 import { supabaseAdmin } from "../../lib/supabaseAdmin"
 // GET all shipments
-export async function GET() {
-  const { data, error } = await supabaseAdmin
-    .from("shipments")
-    .select("*")
+export async function GET(req) {
+  try {
+    // Read query params for pagination
+    const url = new URL(req.url);
+    const page = parseInt(url.searchParams.get("page")) || 1; // default page 1
+    const limit = parseInt(url.searchParams.get("limit")) || 10; // default 10 per page
+    const from = (page - 1) * limit;
+    const to = from + limit - 1;
 
-  if (error) return new Response(JSON.stringify({ message: error.message }), { status: 500 })
+    // Fetch shipments with ordering and pagination
+    const { data, error, count } = await supabaseAdmin
+      .from("shipments")
+      .select("*", { count: "exact" }) // count is needed to calculate total pages
+      .order("created_at", { ascending: false })
+      .range(from, to);
 
-  return new Response(JSON.stringify(data), { status: 200 })
+    if (error) throw error;
+
+    return new Response(
+      JSON.stringify({
+        shipments: data,
+        total: count,
+        page,
+        limit,
+        totalPages: Math.ceil(count / limit),
+      }),
+      { status: 200 }
+    );
+  } catch (err) {
+    return new Response(JSON.stringify({ message: err.message }), { status: 500 });
+  }
 }
-
 // POST new shipment
 export async function POST(req) {
   const body = await req.json()

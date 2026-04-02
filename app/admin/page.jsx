@@ -14,7 +14,7 @@ const Page = () => {
     const fetchShipments = async () => {
       const res = await fetch("/api/shipments")
       const data = await res.json()
-      setShipments(Array.isArray(data) ? data : [])
+      setShipments(Array.isArray(data.shipments) ? data.shipments : [])
       setLoading(false)
     }
     fetchShipments()
@@ -31,22 +31,24 @@ const Page = () => {
     delivered: shipments.filter(s => s.status === "Delivered").length,
   }
 
-  const filteredShipments = getFilteredShipments(shipments, statusFilter)
+  const filteredShipments = getFilteredShipments(shipments, statusFilter).slice(0, 5)
+  
+
 
   return (
     <div className='min-h-screen bg-[#1D4DB5]/30'>
-      <div className='px-8 md:px-16 py-20'>
-        <div className='max-w-6xl mx-auto bg-white px-10 py-6 shadow-lg rounded-2xl '>
+      <div className='px-6 md:px-10 lg:px-16 py-20'>
+        <div className='max-w-6xl mx-auto bg-white px-4 md:px-6 py-6 shadow-lg rounded-2xl '>
           <div className='flex justify-between'>
             <h1 className='text-lg md:text-xl font-bold text-[#0E2470]'>Overview</h1>
             <Link href="/admin/create" className='font-medium'>
-              <button className='rounded text-red-500 hover:text-yellow-400 text-sm font-bold underline cursor-pointer'>
+              <button className='rounded text-red-500 hover:text-yellow-400 text-sm md:text-base font-bold underline cursor-pointer '>
                 + Create Shipment
               </button>
             </Link>
           </div>
 
-          <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 py-10 px-2'>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 py-10'>
             <StatsCard
               label="Total Shipments"
               value={stats.total}

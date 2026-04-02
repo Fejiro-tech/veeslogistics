@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const SideBar = () => {
   return (
-    <aside className="w-54 md:w-64 h-screen bg-white
+    <aside className="w-54 md:w-52 lg:w-64 h-screen bg-white
                       border-r border-[#1D4DB5]
                       flex flex-col
                       px-6 py-2">
@@ -32,11 +32,7 @@ const SideBar = () => {
                                            font-bold transition">
           Create Shipments
         </a>
-        <a href="/settings" className="
-                                       hover:text-red-700 
-                                       font-bold transition">
-          Settings
-        </a>
+    
       </nav>
     </aside>
   )
