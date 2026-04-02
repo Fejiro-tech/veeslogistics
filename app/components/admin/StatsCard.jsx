@@ -36,7 +36,7 @@ const StatsCard = ({ label, value, type, onClick }) => {
       />
       
       <p className='text-base md:text-lg font-bold relative z-10'>{label}</p>
-      <motion.p className='text-3xl font-medium relative z-10'>
+      <motion.p className='text-xl md:text-3xl font-medium relative z-10'>
         {rounded}
       </motion.p>
     </motion.div>
