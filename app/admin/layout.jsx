@@ -38,7 +38,7 @@ export default function AdminLayout({ children }) {
 
             <button 
               onClick={() => setIsOpen(!isOpen)} 
-              className="block md:hidden text-[#0E2470]"
+              className="block md:hidden text-[#166534]"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -50,7 +50,7 @@ export default function AdminLayout({ children }) {
           <>
             <div className="bg-black/40 fixed inset-0 backdrop-blur-md z-20"
                 onClick={() => setIsOpen(false)}></div>
-            <div className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg z-70 flex flex-col p-6 space-y-14 text-xl items-start text-[#0E2470] hover:text-red-700 uppercase font-bold">
+            <div className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg z-70 flex flex-col p-6 space-y-14 text-xl items-start text-[#166534] hover:text-red-700 uppercase font-bold">
               <button 
                   onClick={() => setIsOpen(false)} 
                   className="self-end text-[#0E2470]"
