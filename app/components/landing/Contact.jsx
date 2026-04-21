@@ -27,7 +27,7 @@ const Contact = ({ formData, setFormData, handleSubmit, submitted, loading}) => 
       viewport={{ once: true, amount: 0.3 }}
       variants={container}
     >
-      <motion.h1 variants={section} className="text-3xl md:text-4xl font-bold text-[#0E2470] mb-4 text-center">
+      <motion.h1 variants={section} className="text-3xl md:text-4xl font-bold text-[#166534] mb-4 text-center">
         Contact Us
       </motion.h1>
 
@@ -43,7 +43,7 @@ const Contact = ({ formData, setFormData, handleSubmit, submitted, loading}) => 
           value={formData.name} 
           onChange={handleChange}
           required
-          className="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1D4DB5]"
+          className="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#166534]"
         />
 
         <input 
@@ -53,7 +53,7 @@ const Contact = ({ formData, setFormData, handleSubmit, submitted, loading}) => 
           value={formData.email} 
           onChange={handleChange}
           required
-          className="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1D4DB5]"
+          className="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#166534]"
         />
 
         <textarea 
@@ -63,13 +63,13 @@ const Contact = ({ formData, setFormData, handleSubmit, submitted, loading}) => 
           onChange={handleChange}
           required
           rows={5}
-          className="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1D4DB5]"
+          className="border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#166534]"
         />
 
         <button 
           type="submit" 
           disabled={loading}
-          className="bg-[#1D4DB5] text-white py-3 rounded-lg font-bold hover:bg-[#163a91] transition"
+          className="bg-[#166534] text-white py-3 rounded-lg font-bold hover:bg-[#16803f] transition"
         >
 
           {loading ? <span className="animate-pulse"> "Sending..."</span> : "Send Message"}

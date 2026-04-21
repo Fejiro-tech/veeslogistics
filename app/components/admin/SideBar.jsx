@@ -4,20 +4,22 @@ import Image from 'next/image'
 const SideBar = () => {
   return (
     <aside className="w-54 md:w-52 lg:w-64 h-screen bg-white
-                      border-r border-[#1D4DB5]
+                      border-r border-[#166534]
                       flex flex-col
                       px-6 py-2">
 
-      <Image 
+      {/* <Image 
         src='/images/SwiftLogo.png'
         alt="logo"
         width={100}
         height={100}
         className=" w-25  h-10 md:w-35 lg:w-30 md:h-15"
-      />
+      /> */}
+
+      <h1 className='text-[#166534] font-bold text-2xl'>[LOGO]</h1>
 
       {/* Nav links */}
-      <nav className="flex flex-col space-y-10 text-lg mt-6 text-[#0E2470]">
+      <nav className="flex flex-col space-y-10 text-lg mt-6 text-[#166534]">
         <a href="/admin" className=" hover:text-red-700 
                                 font-bold transition">
           Overview

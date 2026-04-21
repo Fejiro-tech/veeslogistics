@@ -29,11 +29,11 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
   return (
     <div>
         <div className='bg-white rounded-2xl shadow-lg max-w-6xl mx-auto px-4 py-6 '>
-            <h2 className='mb-4 text-[#0E2470] font-bold text-lg md:text-md'>Create Shipment</h2>
+            <h2 className='mb-4 text-[#166534] font-bold text-lg md:text-md'>Create Shipment</h2>
             <hr className='border-gray-300'/>
             <form onSubmit={handleSubmit}>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-[#0E2470] text-base md:text-lg  mt-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-[#166534] text-base md:text-lg  mt-4'>
                     <div className='flex flex-col gap-2 md:gap-4 '>
                         <label  className='font-medium'>Sender:</label>
                         <input 
@@ -44,7 +44,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         />
                     </div>
 
-                     <div className='flex flex-col gap-2 md:gap-4 text-[#0E2470] text-base md:text-lg'>
+                     <div className='flex flex-col gap-2 md:gap-4 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium '>Receiver:</label>
                         <input 
                             name="receiverName"
@@ -54,7 +54,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         />
                     </div>
 
-                     <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg'>
+                     <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium '>Sender's Phone:</label>
                         <input 
                             name="senderPhone"
@@ -64,7 +64,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         />
                     </div>
 
-                    <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg'>
+                    <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium '>Receiver's Phone</label>
                         <input 
                             name="receiverPhone"
@@ -73,7 +73,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                             className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
                         />
                     </div>
-                     <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg '>
+                     <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg '>
                         <label  className='font-medium'>Origin</label>
                         <input 
                             name="senderOrigin"
@@ -82,7 +82,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                             className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
                         />
                     </div>
-                    <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg'>
+                    <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium'>Destination</label>
                         <input 
                             name="receiverAddress"
@@ -91,7 +91,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                             className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
                         />
                     </div>
-                     <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg'>
+                     <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium'>Estimated Delivery</label>
                         <input 
                             name="estimatedDelivery"
@@ -100,7 +100,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                             className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
                         />
                     </div>
-                     <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg'>
+                     <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium'>Package Description</label>
                         <input 
                             name="packageDescription"
@@ -110,7 +110,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         />
                     </div>
 
-                     <div className='flex flex-col gap-2 text-[#0E2470] text-base md:text-lg'>
+                     <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
                         <label  className='font-medium'>Status</label>
                         <select
                                 name='status'
@@ -128,7 +128,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
 
                 </div>
 
-                <button className='bg-[#0E2470] hover:bg-blue-900 p-2 md:p-4 w-full mt-6 rounded text-white cursor-pointer'>Create Shipment</button>
+                <button className='bg-[#166534] hover:bg-[#187a3e] p-2 md:p-4 w-full mt-6 rounded text-white cursor-pointer'>Create Shipment</button>
 
                 
 

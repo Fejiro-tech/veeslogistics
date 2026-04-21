@@ -7,8 +7,8 @@ const Timeline = ({ timeline }) => {
 
   return (
     <div>
-      <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-4 max-w-6xl mx-auto">
-        <h3 className="text-base md:text-2xl font-bold text-[#1535A0] mb-3">
+      <div className="bg-white rounded-2xl border border-[#166534]/30 p-6 mb-4 max-w-6xl mx-auto">
+        <h3 className="text-base md:text-2xl font-bold text-[#166534] mb-3">
           Timeline
         </h3>
         <hr className="border-gray-300 mb-4" />

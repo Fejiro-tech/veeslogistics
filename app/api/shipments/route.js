@@ -41,6 +41,7 @@ export async function POST(req) {
     status: "Shipment Created",
     estimatedDelivery: body.estimatedDelivery,
     packageDescription: body.packageDescription,
+
     sender: {
       name: body.senderName,
       phone: body.senderPhone,

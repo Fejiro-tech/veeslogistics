@@ -12,7 +12,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
     <div className='pt-10'>
       <div className='bg-white max-w-6xl mx-auto py-10 px-4 md:px-10 rounded-2xl shadow-xl  '>
         <div className='flex justify-between mb-4'>
-          <h1 className=' mb-6 text-[#0E2470] font-bold text-base md:text-xl'>{title}</h1>
+          <h1 className=' mb-6 text-[#166534] font-bold text-base md:text-xl'>{title}</h1>
           <Link href="/admin/shipments" className='font-medium'>
             <button className='text-red-500 hover:text-yellow-400 text-sm md:text-base rounded font-bold underline'>
               {buttonText}
@@ -23,7 +23,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
         <div className='overflow-x-auto custom-scrollbar'>
           <table className='min-w-175 md:w-full whitespace-nowrap '>
             <thead>
-              <tr className='text-left text-[#0E2470] text-base md:text-lg border-b border-gray-300'>
+              <tr className='text-left text-[#166534] text-base md:text-lg border-b border-gray-300'>
                 <th className='pb-3 pr-10'>Tracking ID</th>
                 <th className='pb-3 pr-10'>Sender</th>
                 <th className='pb-3 pr-10'>Receiver</th>
@@ -52,7 +52,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
                     <>
                       <td className='py-3'>
                         <button
-                          className='border border-blue-300 bg-blue-200 rounded px-4'
+                          className='border border-[#166534] bg-[#166534]/30 rounded px-4'
                           onClick={() => {
                             setSelectedShipment(shipment)
                             setNewStatus(shipment.status) // prefill dropdown
@@ -63,7 +63,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
                       </td>
                       <td className='py-3'>
                         <button
-                          className='border border-blue-300 bg-blue-200 rounded px-4'
+                          className='border border-[#166534] bg-[#166534]/40 rounded px-4'
                           onClick={() => {
                             onDelete(shipment.trackingId)
                           }}

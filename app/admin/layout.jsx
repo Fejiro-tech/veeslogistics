@@ -33,8 +33,8 @@ export default function AdminLayout({ children }) {
         </div>
         <div className=" flex flex-col">
           <div className="flex justify-between items-center py-8 px-6 md:px-8 lg:px-12 
-                          border-b border-[#1D4DB5] bg-white fixed top-0 left-0 md:left-52 lg:left-64 right-0 h-1">
-            <h1 className="text-lg font-bold text-[#0E2470] flex-1">Admin Dashboard</h1>
+                          border-b border-[#166534] bg-white fixed top-0 left-0 md:left-52 lg:left-64 right-0 h-1">
+            <h1 className="text-lg font-bold text-[#166534] flex-1">Admin Dashboard</h1>
 
             <button 
               onClick={() => setIsOpen(!isOpen)} 
@@ -68,7 +68,7 @@ export default function AdminLayout({ children }) {
           </>
         )}
               
-          <main className="ml-0 md:ml-52 lg:ml-64 mt-12 min-h-screen bg-[#1D4DB5]/30">{children}</main>
+          <main className="ml-0 md:ml-52 lg:ml-64 mt-12 min-h-screen bg-[#14532D]">{children}</main>
         </div>
 
         

@@ -61,7 +61,7 @@ const Page = () => {
   }
 
   return (
-    <div className='min-h-screen bg-[#1D4DB5]/30 px-6 py-20'>
+    <div className='min-h-screen px-6 py-20'>
       <Shipmentable 
         shipments={shipments}
         onUpdate={handleUpdate}
@@ -80,7 +80,7 @@ const Page = () => {
           Previous
         </button>
 
-        <span>Page {page} of {totalPages}</span>
+        <span className='text-gray-200'>Page {page} of {totalPages}</span>
 
         <button
           onClick={() => setPage(prev => Math.min(prev + 1, totalPages))}

@@ -42,7 +42,7 @@ const Page = () => {
   }
 
   return (
-    <div className='min-h-screen bg-[#1D4DB5]/30 py-20 px-8'>
+    <div className='min-h-screen py-20 px-8'>
       <CreateShipmentForm
         handleSubmit={handleSubmit}
         formData={formData}

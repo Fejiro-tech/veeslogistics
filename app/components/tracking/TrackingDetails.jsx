@@ -9,9 +9,9 @@ const TrackingDetails = ({ shipment }) => {
 
   return (
     <div className="py-32 w-full min-h-screen px-8">
-      <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl py-10 md:py-20 px-4 md:px-10 mb-6">
+      <div className="max-w-6xl mx-auto bg-white border border-[#166534]/30 rounded-2xl shadow-xl py-10 md:py-20 px-4 md:px-10 mb-6">
         <div className="flex md:items-center flex-col md:flex-row md:justify-between mb-4">
-          <h2 className="text-base md:text-2xl font-bold text-[#1535A0]">
+          <h2 className="text-base md:text-2xl font-bold text-[#166534]">
             {shipment.trackingId}
           </h2>
           <p className="text-sm text-gray-500 mt-2 md:mt-0">
@@ -54,7 +54,7 @@ const TrackingDetails = ({ shipment }) => {
       {/* ✅ Pass the correct timeline array */}
       <Timeline timeline={shipment.timeline} />
 
-      <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl py-4 px-4 md:px-10 flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+      <div className="max-w-6xl mx-auto bg-white border border-[#166534]/30 rounded-2xl shadow-xl py-4 px-4 md:px-10 flex flex-col md:flex-row md:justify-between md:items-center gap-2">
         <p>Track another shipment</p>
         <TrackingCard className="flex-1" />
       </div>

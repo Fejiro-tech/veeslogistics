@@ -11,10 +11,10 @@ const Hero = () => {
 
       {/* Background */}
       <Image
-        src="/images/wave.svg"
+        src="/images/waves2.svg"
         alt="background"
         fill
-        className="absolute inset-0 object-cover opacity-70 pointer-events-none "
+        className="absolute inset-0 object-cover pointer-events-none "
       />
 
       <div className="flex flex-col-reverse lg:flex-row justify-center w-full items-center lg:max-w-360 lg:mx-auto gap-4 py-24 px-4 lg:px-10 relative z-10">
@@ -27,26 +27,26 @@ const Hero = () => {
           className="w-full lg:w-[40%] lg:flex flex-col lg:min-h-145"
         >
           <div className="flex-1 leading-tight">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-[#0E2470] uppercase leading-tight text-nowrap">
-              Swift <span>logistics</span>
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white uppercase leading-tight text-nowrap">
+              Vee's <span className='text-[#FFD600]'>logistics</span>
             </h1>
 
-            <p className="text-gray-700 text-base sm:text-lg max-w-md mt-">
+            <p className="lg:text-gray-300 text-base sm:text-lg max-w-md mt-">
               Delivering trust, one package at a time.
+            </p>
+            <p className="lg:text-gray-300 mt-2 text-sm md:text-base mb-6">
+              Trusted by <span className="font-bold">10,000</span>+ customers
             </p>
 
             <div>
               <Link
                 href="/track"
-                className="inline-block bg-[#0E2470] text-sm md:text-base text-white px-6 py-3 rounded-lg mt-12 lg:mt-6 hover:bg-[#163a91] transition font-semibold"
+                className="inline-block border-[#166534] border md:bg-white text-sm md:text-base text-green px-6 py-3 rounded-lg mt-12 lg:mt-6  transition font-semibold"
               >
                 Track Your Delivery
               </Link>
             </div>
 
-            <p className="text-gray-500 mt-4 text-sm md:text-base">
-              Trusted by <span className="font-bold">10,000</span>+ customers
-            </p>
           </div>
 
           {/* Stats */}
@@ -90,7 +90,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className='relativ z-30 flex items-center justify-center'
           >
-            <div className='absolute w-52 h-52 md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] rounded-full ring 2 ring-blue-400 animate-ping '>
+            <div className='absolute w-52 h-52 md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] rounded-full ring 2 ring-yellow-400 animate-ping '>
 
             </div>
             <Image  
@@ -98,7 +98,7 @@ const Hero = () => {
               alt="delivery man"
               width={500}
               height={500}
-              className="w-82 h-82 md:w-[500px] md:h-[500px] lg:w-[650px] lg:h-[650px]  object-cover z-20 drop-shadow-[0_0_20px_#3b82f6] animate-float"
+              className="w-82 h-82 md:w-[500px] md:h-[500px] lg:w-[650px] lg:h-[650px]  object-cover z-20 drop-shadow-[0_0_20px_#166534] animate-float"
             />
           </motion.div>
 

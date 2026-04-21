@@ -24,7 +24,7 @@ export default function Page() {
   )
 
   return (
-    <div className="bg-[#1D4DB5]/30 min-h-screen w-full">
+    <div className=" min-h-screen w-full">
       <div className="pt-[5%]">
         <TrackingDetails shipment={shipment} />
       </div>

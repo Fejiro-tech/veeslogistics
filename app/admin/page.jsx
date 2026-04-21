@@ -36,7 +36,7 @@ const Page = () => {
 
 
   return (
-    <div className='min-h-screen bg-[#1D4DB5]/30'>
+    <div className='min-h-screen'>
       <div className='px-6 md:px-10 lg:px-16 py-20'>
         <div className='max-w-6xl mx-auto bg-white px-4 md:px-6 py-6 shadow-lg rounded-2xl '>
           <div className='flex justify-between'>

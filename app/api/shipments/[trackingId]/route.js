@@ -3,7 +3,7 @@ import { supabaseAdmin } from "../../../lib/supabaseAdmin"
 // GET one shipment
 
 export async function GET(req, { params }) {
-  const { trackingId } = await params  // ✅ fixed
+  const { trackingId } = await params  
 
   const { data, error } = await supabaseAdmin
     .from("shipments")

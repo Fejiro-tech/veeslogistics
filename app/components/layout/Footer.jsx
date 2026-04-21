@@ -40,7 +40,7 @@ const Footer = ({ type = "user" }) => {
 
   return (
     <motion.footer 
-      className="bg-[#0E2470] text-white pt-12 pb-6"
+      className="bg-[#166534] text-white pt-12 pb-6"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
@@ -49,7 +49,7 @@ const Footer = ({ type = "user" }) => {
       <div className="max-w-360 mx-auto px-8 md:px-10 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16">
 
         <motion.div variants={section} className="flex flex-col space-y-4">
-          <h1 className="text-3xl font-bold">Swift <span className="text-[#FFD600]">Logistics</span></h1>
+          <h1 className="text-3xl font-bold">Vee's <span className="text-[#FFD600]">Logistics</span></h1>
           <p className="text-gray-200 text-sm">
             Delivering trust, one package at a time. Fast, reliable, and secure logistics services you can count on.
           </p>
@@ -91,7 +91,7 @@ const Footer = ({ type = "user" }) => {
           <h3 className="text-xl font-bold mb-2">Contact Us</h3>
           <p className="text-gray-200 text-sm">123 Logistics Street</p>
           <p className="text-gray-200 text-sm">Lagos, Nigeria</p>
-          <p className="text-gray-200 text-sm">Email: info@swiftlogistics.com</p>
+          <p className="text-gray-200 text-sm">Email: info@veeslogistics.com</p>
           <p className="text-gray-200 text-sm">Phone: +234 123 456 7890</p>
         </motion.div>
 
@@ -100,7 +100,7 @@ const Footer = ({ type = "user" }) => {
       <motion.div variants={section} className="border-t border-white/20 mt-8"></motion.div>
 
       <motion.p variants={section} className="text-center text-gray-200 text-sm mt-4">
-        &copy; {new Date().getFullYear()} Swift Logistics. All rights reserved.
+        &copy; {new Date().getFullYear()} Vee's Logistics. All rights reserved.
       </motion.p>
     </motion.footer>
   )

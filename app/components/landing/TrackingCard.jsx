@@ -24,11 +24,11 @@ router.push(`/track/${trackingId}`)
           value={trackingId}
           onChange={(e) => setTrackingId(e.target.value)}
           placeholder='Enter Tracking ID..'
-          className='bg-white w-[70%] p-2 md:p-4 rounded-lg placeholder:text-blue-400 outline-0 border  focus:border-2 focus:border-yellow-400 text-[#1D4DB5] text-sm md:text-base'
+          className='bg-white w-[70%] p-2 md:p-4 rounded-lg placeholder:text-green-400 outline-0 border  focus:border-2 focus:border-yellow-400 text-[#166534] text-sm md:text-base'
         />
         <button 
           onClick={handleTrack} // call context function
-          className='bg-[#1D4DB5] py-2 md:py-4 px-8 rounded-lg text-white font-medium text-sm md:text-base'
+          className='bg-[#166534] py-2 md:py-4 px-8 rounded-lg border border-white text-white font-medium text-sm md:text-base'
         >
           Track
         </button>
