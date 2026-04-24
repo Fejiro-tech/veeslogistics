@@ -2,12 +2,12 @@ import React from 'react'
 
 const stats = [
   {
-    number: "2k+",
+    number: "200+",
     desc: "Deliveries"
   },
   {
    
-    number: "50+",
+    number: "20+",
     desc: "Areas Covered"
   },
   {
@@ -16,7 +16,7 @@ const stats = [
     desc: "Support"
   },
   {
-    number: "99%",
+    number: "95%",
     desc: "Success Rate"
   }
 ]
@@ -24,10 +24,10 @@ const stats = [
 const Stats = () => {
   return (
     <section className=" w-full max-w-3xl  md:mb-0">
-      <div className="grid grid-cols-4 bg-[#166534]  rounded-2xl overflow-hidden ">
+      <div className="grid grid-cols-4  bg-[#166534]  rounded-2xl overflow-hidden ">
         {stats.map((stat, i) => (
           <div key={i} className="text-white p-2 md:p- text-center border-r border-[#9ca6bb]">
-          <span className="font-bold text-lg md:text-3xl">{stat.number}</span>
+          <span className="font-bold text-lg md:text-xl lg:text-2xl">{stat.number}</span>
           <p className="text-[10px] md:text-base">{stat.desc}</p>
         </div>
 

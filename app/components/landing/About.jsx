@@ -30,26 +30,35 @@ const About = () => {
 
       <motion.div variants={section} className="flex flex-col lg:flex-row items-center gap-12 mt-12">
         {/* Image */}
-        <div className="lg:w-1/2 w-full relative h-120  lg:h-150 rounded-xl overflow-hidden shadow-lg">
-          <Image 
-            src="/images/deliveryman.png"
+        <div className="lg:w-1/2 w-full relative h-120 lg:h-150 rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/images/rider.png"
             alt="Swift Logistics"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-contain"
           />
         </div>
 
         {/* Text */}
         <div className="lg:w-1/2 w-full">
-          <p className="text-gray-700 text-base lg:text-lg mb-4">
-            At <span className="font-bold text-[#166534]">Vee's Logistics</span>, we are committed to providing fast, reliable, and secure delivery services across Delta state. Our mission is to ensure your packages arrive safely and on time.
+
+          <p className="text-gray-800 text-base lg:text-lg mb-4 leading-relaxed">
+            <span className="font-semibold text-[#166534]">Vee's Logistics</span> was built with one simple idea — delivery in Warri should be fast, predictable, and stress-free. We exist to remove the uncertainty that comes with sending packages.
           </p>
-          <p className="text-gray-700  text-base lg:text-lg mb-4">
-            We leverage modern tracking technology and a dedicated team to make sure every delivery is smooth, transparent, and hassle-free. Trusted by over <span className="font-bold">10,000</span> customers, we are your go-to logistics partner.
+
+          <p className="text-gray-800 text-base lg:text-lg mb-4 leading-relaxed">
+            From the moment a parcel is picked up to the moment it arrives, we focus on control, visibility, and reliability. Every delivery is tracked and handled by a team that understands the value of time and trust.
           </p>
-          <p className="text-gray-700  text-base lg:text-lg">
-            Whether it's same-day delivery, parcel delivery, or express shipping, <span className="font-bold text-[#166534]">Vee's Logistics</span> ensures your packages are in safe hands.
+
+          <p className="text-gray-800 text-base lg:text-lg mb-4 leading-relaxed">
+            We've supported over <span className="font-bold">200+</span> successful deliveries across Delta State, helping individuals and businesses move faster with confidence.
           </p>
+
+          <p className="text-gray-800 text-base lg:text-lg leading-relaxed">
+            Whether it's same-day delivery or urgent express dispatch, we make sure your package gets where it needs to be — without delays, confusion, or stress.
+          </p>
+
         </div>
       </motion.div>
     </motion.div>

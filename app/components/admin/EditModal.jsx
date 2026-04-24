@@ -13,7 +13,7 @@ const EditModal = ({ newStatus, setNewStatus, onClose, onUpdate, selectedShipmen
   return (
     <div className='fixed inset-0 bg-black/40 flex items-center justify-center p-10'>
       <div className='bg-white p-6 rounded-lg w-full max-w-md'>
-        <h1 className='text-lg font-bold mb-4'>Update Shipment Status</h1>
+        <h1 className='text-lg font-bold mb-4 text-[#166534]'>Update Shipment Status</h1>
 
         <select
           value={newStatus}
@@ -39,7 +39,7 @@ const EditModal = ({ newStatus, setNewStatus, onClose, onUpdate, selectedShipmen
               onUpdate(selectedShipment.trackingId, newStatus);
               setSelectedShipment(null);
             }}
-            className='px-4 py-2 bg-blue-500 text-white rounded'
+            className='px-4 py-2 bg-[#166534] text-white rounded'
           >
             Save
           </button>

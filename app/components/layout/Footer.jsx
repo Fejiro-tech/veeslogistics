@@ -89,10 +89,10 @@ const Footer = ({ type = "user" }) => {
 
         <motion.div variants={section} className="flex flex-col space-y-2">
           <h3 className="text-xl font-bold mb-2">Contact Us</h3>
-          <p className="text-gray-200 text-sm">123 Logistics Street</p>
-          <p className="text-gray-200 text-sm">Lagos, Nigeria</p>
-          <p className="text-gray-200 text-sm">Email: info@veeslogistics.com</p>
-          <p className="text-gray-200 text-sm">Phone: +234 123 456 7890</p>
+          <p className="text-gray-200 text-sm">Warri City,</p>
+          <p className="text-gray-200 text-sm">Delta State, Nigeria</p>
+          <p className="text-gray-200 text-sm">Email: veeslogistics44@gmail.com</p>
+          <p className="text-gray-200 text-sm">Phone: +234 705 419 5186</p>
         </motion.div>
 
       </div>

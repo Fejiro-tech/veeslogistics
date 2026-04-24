@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Swift Logistics",
-  description: "Delivering trust, one package at a time.",
-  icons:  '/SwiftLogo.png'
+  title: "Vee's Logistics",
+  description: "Reliable, Efficient, Fast.",
+  // icons:  '/SwiftLogo.png'
   
 };
 
