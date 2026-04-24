@@ -30,15 +30,15 @@ const Hero = () => {
 
           <div className="relative flex-1 leading-tight">
 
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white uppercase leading-tight text-nowrap">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white uppercase leading-tight text-nowrap mt-8">
               Vee's <span className='text-[#FFD600]'>logistics</span>
             </h1>
 
-            <p className="text-gray-100 md:text-gray-800 lg:text-gray-300 text-base sm:text-lg max-w-md mt-2 font-medium">
+            <p className="text-gray-800 lg:text-gray-300 text-base sm:text-lg max-w-md mt-2 font-medium">
               Delivering trust, one package at a time.
             </p>
 
-            <p className="text-gray-100  md:text-gray-800 lg:text-gray-300 mt-1 text-sm md:text-base mb-6 font-medium">
+            <p className="text-gray-800 lg:text-gray-300 mt-1 text-sm md:text-base mb-6 font-medium">
               From <span className="font-bold">pickup</span> to{" "}
               <span className="font-bold">delivery,</span> stay updated.
             </p>
