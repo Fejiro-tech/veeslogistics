@@ -36,11 +36,16 @@ export async function GET(req) {
 export async function POST(req) {
   const body = await req.json()
 
+  const formattedDate = body.estimatedDelivery
+        ? new Date(body.estimatedDelivery).toISOString()
+        : null;
+
   const newShipment = {
     trackingId: `TRK-${Date.now()}`,
     status: "Shipment Created",
-    estimatedDelivery: body.estimatedDelivery,
+    estimatedDelivery: formattedDate,
     packageDescription: body.packageDescription,
+    amount: body.amount,
 
     sender: {
       name: body.senderName,

@@ -5,9 +5,11 @@ import { useEffect, useState } from 'react'
 
 const Page = () => {
   const [shipments, setShipments] = useState([])
+  const [isUpdating, setIsUpdating] = useState(false);
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const limit = 10 // shipments per page
+  
 
   // Fetch shipments with pagination
   const fetchShipments = async (currentPage = 1) => {
@@ -28,6 +30,8 @@ const Page = () => {
 
   // Update shipment status
   const handleUpdate = async (trackingId, newStatus) => {
+    setIsUpdating(true);
+
     try {
       const res = await fetch(`/api/shipments/${trackingId}`, {
         method: "PATCH",
@@ -40,6 +44,7 @@ const Page = () => {
       console.error("Failed to update shipment:", err)
       toast.error("Failed to update this shipment", err.message)
     }
+    setIsUpdating(false);
   }
 
   // Delete shipment
@@ -61,17 +66,18 @@ const Page = () => {
   }
 
   return (
-    <div className='min-h-screen px-6 py-20'>
+    <div className='min-h-screen px-6 pt-20'>
       <Shipmentable 
         shipments={shipments}
         onUpdate={handleUpdate}
         onDelete={handleDelete}
-        title="Shipments"
+        title=" All Shipments"
         showButton={true}
+        isUpdating={isUpdating}
       />
 
       {/* Pagination controls */}
-      <div className="flex justify-between mt-4 max-w-280 mx-auto">
+      <div className="flex justify-between mt-4 max-w-280 mx-auto px-6 md:px-0">
         <button
           onClick={() => setPage(prev => Math.max(prev - 1, 1))}
           disabled={page === 1}

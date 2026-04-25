@@ -33,7 +33,7 @@ export default function AdminLayout({ children }) {
         </div>
         <div className=" flex flex-col">
           <div className="flex justify-between items-center py-8 px-6 md:px-8 lg:px-12 
-                          border-b border-[#166534] bg-white fixed top-0 left-0 md:left-52 lg:left-64 right-0 h-1">
+                          border-b border-[#166534] bg-white fixed top-0 left-0 md:left-52 lg:left-64 right-0 h-1 z-[1000]">
             <h1 className="text-lg font-bold text-[#166534] flex-1">Admin Dashboard</h1>
 
             <button 

@@ -30,13 +30,13 @@ const About = () => {
 
       <motion.div variants={section} className="flex flex-col lg:flex-row items-center gap-12 mt-12">
         {/* Image */}
-        <div className="lg:w-1/2 w-full relative h-120 lg:h-150 rounded-xl overflow-hidden shadow-lg">
+        <div className="md:w-1/2 w-full relative h-130 lg:h-150 rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/images/rider.png"
+            src="/images/image1.jpeg"
             alt="Swift Logistics"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-contain"
+            className="object-cover"
           />
         </div>
 

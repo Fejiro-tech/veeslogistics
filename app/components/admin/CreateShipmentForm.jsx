@@ -96,6 +96,8 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         <input 
                             name="estimatedDelivery"
                             value={formData.estimatedDelivery}
+                            type='date'
+                             min={new Date().toISOString().split("T")[0]}
                             onChange={handleChange} 
                             className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
                         />
@@ -105,6 +107,16 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         <input 
                             name="packageDescription"
                             value={formData.packageDescription}
+                            onChange={handleChange}
+                            className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
+                        />
+                    </div>
+                     <div className='flex flex-col gap-2 text-[#166534] text-base md:text-lg'>
+                        <label  className='font-medium'>Amount</label>
+                        <input 
+                            name="amount"
+                            type='number'
+                            value={formData.amount}
                             onChange={handleChange}
                             className='w-full border border-gray-300 p-2 rounded text-sm md:text-base'
                         />

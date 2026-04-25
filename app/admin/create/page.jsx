@@ -15,6 +15,7 @@ const Page = () => {
     senderOrigin: "",
     estimatedDelivery: "",
     packageDescription: "",
+    amount: "",
     status: "Shipment Created"
   })
 
