@@ -44,7 +44,7 @@ const CreateShipmentForm = ({ handleSubmit, formData, setFormData}) => {
                         />
                     </div>
 
-                     <div className='flex flex-col gap-2 md:gap-4 text-[#166534] text-sm md:text-base lg:text-lg'>
+                     <div className='flex flex-col gap-2  md:gap-4 text-[#166534] text-sm md:text-base lg:text-lg'>
                         <label  className='font-medium '>Receiver:</label>
                         <input 
                             name="receiverName"
