@@ -46,7 +46,6 @@ const Page = () => {
             className="w-20 h-auto md:w-25 lg:w-30"
           />
 
-          <h1 className='text-white font-bold text-2xl'>[LOGO]</h1>
           <p className='mt-2 text-lg text-gray-300 font-medium'>Sign in to your admin account.</p>
 
           <div className='mt-8 flex flex-col gap-2'>
