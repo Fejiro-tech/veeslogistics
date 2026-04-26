@@ -33,7 +33,7 @@ const About = () => {
         <div className="md:w-1/2 w-full relative h-130 lg:h-150 rounded-xl overflow-hidden shadow-lg">
           <Image
             src="/images/image1.jpeg"
-            alt="Swift Logistics"
+            alt="Vee's Logistics"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"

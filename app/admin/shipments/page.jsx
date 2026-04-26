@@ -66,7 +66,7 @@ const Page = () => {
   }
 
   return (
-    <div className='min-h-screen px-6 pt-20'>
+    <div className='min-h-screen px-6 py-20'>
       <Shipmentable 
         shipments={shipments}
         onUpdate={handleUpdate}

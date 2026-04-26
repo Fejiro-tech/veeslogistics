@@ -8,41 +8,43 @@ const AuthContext = createContext()
 export const AuthProvider = ({ children }) => {
   const [session, setSession] = useState(null)
   const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [authLoading, setAuthLoading] = useState(true)   // for init/Protected
+  const [loginLoading, setLoginLoading] = useState(false) // for login button only
 
   useEffect(() => {
+    let isMounted = true
+
     const initAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession()
-
+      if (!isMounted) return
       setSession(session)
       setUser(session?.user ?? null)
-      setLoading(false)
+      setAuthLoading(false)
     }
 
     initAuth()
 
     const { data: { subscription } } =
       supabase.auth.onAuthStateChange((_event, session) => {
+        if (!isMounted) return
         setSession(session)
         setUser(session?.user ?? null)
-        setLoading(false)
+        setAuthLoading(false)
       })
 
-    return () => subscription.unsubscribe()
+    return () => {
+      isMounted = false
+      subscription.unsubscribe()
+    }
   }, [])
 
-  // LOGIN
   const login = async (email, password) => {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    })
-
+    setLoginLoading(true)
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    setLoginLoading(false)
     return { success: !error, error }
   }
 
-
-  // LOGOUT
   const logout = async () => {
     await supabase.auth.signOut()
   }
@@ -53,10 +55,10 @@ export const AuthProvider = ({ children }) => {
         session,
         user,
         isLoggedIn: !!session,
-        loading,
-        setLoading,
+        authLoading,
+        loginLoading,
         login,
-        logout
+        logout,
       }}
     >
       {children}

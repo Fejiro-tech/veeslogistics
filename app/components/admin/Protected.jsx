@@ -5,16 +5,16 @@ import { useEffect } from "react"
 import { useAuth } from "../../context/AuthContext"
 
 const Protected = ({ children }) => {
-  const { isLoggedIn, loading } = useAuth()
+  const { isLoggedIn, authLoading } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
-    if (!loading && !isLoggedIn) {
+    if (!authLoading && !isLoggedIn) {
       router.push("/admin/login")
     }
-  }, [isLoggedIn, loading, router])
+  }, [isLoggedIn, authLoading, router])
 
-  if (loading) {
+  if (authLoading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         Loading...

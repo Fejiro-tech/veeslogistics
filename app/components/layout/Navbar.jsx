@@ -13,14 +13,14 @@ const Navbar = ({ type = "user" }) => {
       <div className={`flex justify-between items-center py-2 px-4  lg:px-12 rounded 
         ${type === "user" ? "bg-white text-[#166534] border-b border-[#166534]" : ""}`}>
 
-        {/* <Image 
-        src='/images/SwiftLogo.png'
+        <Image 
+        src='/images/logo2.png'
         alt="logo"
         width={100}
         height={100}
-        className=" w-25  h-10 md:w-35 lg:w-40 md:h-15"
-        /> */}
-        <h1 className="text-2xl font-bold">[LOGO]</h1>
+        className=" w-20 h-auto md:w-25 lg:w-30 "
+        />
+       
 
         {/* Desktop Links */}
         <div className="space-x-6 lg:space-x-10 text-2xl font-bold hidden md:flex items-center">
