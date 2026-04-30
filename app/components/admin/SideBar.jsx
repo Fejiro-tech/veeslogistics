@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 const SideBar = () => {
@@ -8,15 +7,13 @@ const SideBar = () => {
                       flex flex-col
                       px-6 py-2">
 
-      {/* <Image 
-        src='/images/SwiftLogo.png'
+      <Image 
+        src='/images/logo2.png'
         alt="logo"
         width={100}
         height={100}
-        className=" w-25  h-10 md:w-35 lg:w-30 md:h-15"
-      /> */}
-
-      <h1 className='text-[#166534] font-bold text-2xl'>[LOGO]</h1>
+        className=" w-20 h-auto md:w-25 lg:w-30 "
+      />
 
       {/* Nav links */}
       <nav className="flex flex-col space-y-10 text-lg mt-6 text-[#166534]">

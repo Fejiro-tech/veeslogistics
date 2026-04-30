@@ -1,5 +1,4 @@
 "use client"
-import Navbar from "../components/layout/Navbar";
 import SideBar from "../components/admin/SideBar"
 import { useAuth } from "../context/AuthContext"
 import { useRouter } from "next/navigation";
