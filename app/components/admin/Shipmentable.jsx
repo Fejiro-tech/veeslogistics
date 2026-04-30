@@ -47,7 +47,7 @@ const Shipmentable = ({shipments, onUpdate, onDelete, title, buttonText, showBut
                       year: 'numeric'
                     })}
                   </td>
-                  <td className='py-3 pr-10'>{shipment.amount}</td>
+                  <td className='py-3 pr-10'>{"\u20A6"}{shipment.amount}</td>
                   <td className='py-3 pr-10'>{shipment.status}</td>
                   
 

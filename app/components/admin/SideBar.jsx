@@ -5,7 +5,7 @@ const SideBar = () => {
     <aside className="w-54 md:w-52 lg:w-64 h-screen bg-white
                       border-r border-[#166534]
                       flex flex-col
-                      px-6 py-2">
+                      px-6 py-6">
 
       <Image 
         src='/images/logo2.png'
