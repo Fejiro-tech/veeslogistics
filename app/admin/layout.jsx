@@ -67,7 +67,7 @@ export default function AdminLayout({ children }) {
           </>
         )}
               
-          <main className="ml-0 md:ml-52 lg:ml-64 mt-12 min-h-screen bg-[#14532D]">{children}</main>
+          <main className="ml-0 md:ml-52 lg:ml-64 mt-12 min-h-screen bg-gray-200">{children}</main>
         </div>
 
         

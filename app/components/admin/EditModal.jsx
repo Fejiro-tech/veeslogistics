@@ -36,7 +36,7 @@ const EditModal = ({ newStatus, setNewStatus, onClose, onUpdate, selectedShipmen
           </button>
           <button
             onClick={() => {
-              onUpdate(selectedShipment.trackingId, newStatus);
+              onUpdate(selectedShipment, newStatus);
               setSelectedShipment(null);
             }}
             className='px-4 py-2 bg-[#166534] text-white rounded'

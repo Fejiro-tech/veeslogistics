@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 const Page = () => {
   const [shipments, setShipments] = useState([])
-  const [isUpdating, setIsUpdating] = useState(false);
+const [updatingId, setUpdatingId] = useState(null);
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const limit = 10 // shipments per page
@@ -29,23 +29,24 @@ const Page = () => {
   }, [page])
 
   // Update shipment status
-  const handleUpdate = async (trackingId, newStatus) => {
-    setIsUpdating(true);
+  const handleUpdate = async (shipment, newStatus) => {
+    setUpdatingId(shipment.trackingId); // show loading for THIS row
 
     try {
-      const res = await fetch(`/api/shipments/${trackingId}`, {
+      await fetch(`/api/shipments/${shipment.trackingId}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
-      })
-      toast.success("Status updated successfully")
-      if (res.ok) fetchShipments(page)
+      });
+
+      toast.success("Status updated successfully");
+      fetchShipments(page);
     } catch (err) {
-      console.error("Failed to update shipment:", err)
-      toast.error("Failed to update this shipment", err.message)
+      toast.error("Failed to update shipment");
+    } finally {
+      setUpdatingId(null); // stop loading
     }
-    setIsUpdating(false);
-  }
+  };
 
   // Delete shipment
   const handleDelete = async (trackingId) => {
@@ -65,6 +66,7 @@ const Page = () => {
     }
   }
 
+
   return (
     <div className='min-h-screen px-6 py-20'>
       <Shipmentable 
@@ -73,7 +75,7 @@ const Page = () => {
         onDelete={handleDelete}
         title=" All Shipments"
         showButton={true}
-        isUpdating={isUpdating}
+        updatingId={updatingId}
       />
 
       {/* Pagination controls */}
@@ -81,17 +83,17 @@ const Page = () => {
         <button
           onClick={() => setPage(prev => Math.max(prev - 1, 1))}
           disabled={page === 1}
-          className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+          className="px-4 py-2 bg-gray-400 rounded disabled:opacity-50"
         >
           Previous
         </button>
 
-        <span className='text-gray-200'>Page {page} of {totalPages}</span>
+        <span className='text-gray-800'>Page {page} of {totalPages}</span>
 
         <button
           onClick={() => setPage(prev => Math.min(prev + 1, totalPages))}
           disabled={page === totalPages}
-          className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+          className="px-4 py-2 bg-gray-400 rounded disabled:opacity-50"
         >
           Next
         </button>
