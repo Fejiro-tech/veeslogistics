@@ -182,7 +182,6 @@ const Shipmentable = ({
           ))}
         </div>
 
-        {/* MODAL (ONLY ONCE — FIXED) */}
         {selectedShipment && (
           <EditModal
             newStatus={newStatus}

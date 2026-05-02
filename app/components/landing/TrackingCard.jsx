@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react";
-import { useShipment } from "../../context/ShipmentContext"; // adjust path if needed
 import { useRouter } from "next/navigation";
 
 const TrackingCard = () => {
@@ -27,7 +26,7 @@ router.push(`/track/${trackingId}`)
           className='bg-white w-[70%] p-2 md:p-4 rounded-lg placeholder:text-green-400 outline-0 border  focus:border-2 focus:border-yellow-400 text-[#166534] text-base'
         />
         <button 
-          onClick={handleTrack} // call context function
+          onClick={handleTrack} 
           className='bg-[#166534] py-2 md:py-4 px-8 rounded-lg border border-white text-white font-medium text-sm md:text-base'
         >
           Track
