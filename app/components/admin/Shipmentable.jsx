@@ -28,7 +28,7 @@ const Shipmentable = ({
 
   return (
     <div className="pt-10">
-      <div className="md:bg-white max-w-6xl mx-auto md:py-10 px-4 md:px-10 rounded-2xl shadow-xl">
+      <div className="md:bg-white md:max-w-6xl mx-auto md:py-10 px-4 md:px-10 rounded-2xl shadow-xl">
         {/* Header */}
         <div className="flex justify-between mb-6 md:mb-4 border-b border-white/20">
           <h1 className="mb-2 md:mb-6 text-[#18753c] font-bold text-base md:text-xl">
