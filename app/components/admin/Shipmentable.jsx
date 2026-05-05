@@ -154,7 +154,7 @@ const Shipmentable = ({
               </p>
 
               <p className="text-sm">
-                <span className="font-medium text-[#166534]">Created:</span>
+                <span className="font-medium text-[#166534]">Created:</span> 
                   {new Date(shipment.created_at).toLocaleDateString(
                     "en-GB",
                     {
