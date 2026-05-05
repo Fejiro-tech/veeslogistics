@@ -126,7 +126,7 @@ const Shipmentable = ({
           {shipments.map((shipment) => (
             <div
               key={shipment.trackingId}
-              className="space-y-2 bg-white max-w-md rounded-xl py-4 px-4 shadow"
+              className="space-y-2 bg-white max-w-md rounded-xl py-4 px-4 shadow-md border border-gray-300"
             >
               <p className="font-semibold">
                 Tracking ID: {shipment.trackingId}
