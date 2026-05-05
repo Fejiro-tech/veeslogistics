@@ -126,7 +126,7 @@ const Shipmentable = ({
           {shipments.map((shipment) => (
             <div
               key={shipment.trackingId}
-              className="space-y-2 bg-white max-w-md rounded-xl py-4 px-4 shadow-md border border-gray-300"
+              className="space-y-2 bg-white max-w-md rounded-xl py-4 px-4 shadow-md border border-gray-200"
             >
               <p className="font-semibold">
                 Tracking ID: {shipment.trackingId}
@@ -151,6 +151,18 @@ const Shipmentable = ({
                 >
                   {shipment.status}
                 </span>
+              </p>
+
+              <p className="text-sm">
+                <span className="font-medium text-[#166534]">Created:</span>
+                  {new Date(shipment.created_at).toLocaleDateString(
+                    "en-GB",
+                    {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    }
+                  )}
               </p>
 
               <p className="text-sm">
