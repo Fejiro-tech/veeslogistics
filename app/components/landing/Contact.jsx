@@ -17,7 +17,7 @@ const page = () => {
 
   const faqs = [
     {
-      question: "How long is delivery?",
+      question: "How long does delivery take?",
       answer:
         "Delivery within Warri usually takes 30 minutes to 2 hours depending on distance and traffic.",
     },
@@ -43,7 +43,7 @@ const page = () => {
     },
     {
       question: "Do you do same-day delivery?",
-      answer: "Yes, we offer same day deliveries in Warri.",
+      answer: "Yes, we offer same day deliveries within Warri.",
     },
     {
       question: "What items can I send?",
