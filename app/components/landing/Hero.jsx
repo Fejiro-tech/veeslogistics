@@ -1,4 +1,5 @@
 "use client"
+
 import React from 'react'
 import Image from 'next/image'
 import Stats from "./Stats"
@@ -7,7 +8,7 @@ import { motion } from "framer-motion"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-start lg:items-center bg-white overflow-hidden  pt-16 md:pt-24">
+    <section className="relative min-h-screen flex items-start lg:items-center bg-white overflow-hidden pt-16 md:pt-24">
 
       <Image
         src="/images/waves2.svg"
@@ -16,14 +17,14 @@ const Hero = () => {
         className="absolute inset-0 object-cover pointer-events-none"
       />
 
-      <div className="flex flex-col-reverse lg:flex-row justify-center w-full items-center lg:max-w-360 lg:mx-auto md:gap-4 pt-18 px-4 lg:px-10 relative z-10">
+      <div className="flex flex-col-reverse lg:flex-row justify-center w-full items-center lg:max-w-360 lg:mx-auto md:gap-4 lg:gap-10 pt-18 px-4 lg:px-10 relative z-10">
 
-        
+        {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full lg:w-[40%] lg:flex flex-col lg:min-h-145 z-20 relative"
+          className="w-full lg:w-[40%] lg:flex flex-col lg:min-h-145 lg:pr-6 z-20 relative"
         >
 
           <div className="absolute -inset-4 bg-black/10 blur-2xl rounded-2xl lg:hidden" />
@@ -31,7 +32,7 @@ const Hero = () => {
           <div className="relative flex-1 leading-tight">
 
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white uppercase leading-tight text-nowrap mt-8">
-              Vee's <span className='text-[#FFD600]'>logistics</span>
+              Vee&apos;s <span className='text-[#FFD600]'>logistics</span>
             </h1>
 
             <p className="text-gray-800 lg:text-gray-300 text-base sm:text-lg max-w-md mt-2 font-medium">
@@ -53,21 +54,24 @@ const Hero = () => {
             </div>
 
           </div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-4 sm:mt-8"
+            className="mt-6 sm:mt-8 lg:mt-14"
           >
             <Stats />
           </motion.div>
+
         </motion.div>
 
+        {/* RIGHT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="w-full lg:w-[60%] flex items-center justify-center relative z-10"
+          className="w-full lg:w-[60%] flex items-center justify-center lg:justify-end px-4 md:px-6 lg:px-0 relative z-10"
         >
 
           <motion.div
@@ -77,25 +81,26 @@ const Hero = () => {
             className="relative z-30 flex items-center justify-center"
           >
 
-            <div className="relative w-[300px] sm:w-[340px] md:w-[420px] lg:w-[720px] aspect-square">
+            <div className="relative w-[300px] sm:w-[340px] md:w-[400px] lg:w-[650px] xl:w-[720px] aspect-square">
 
               <div className="absolute inset-0 rounded-full bg-white" />
+
               <Image
-                src="/images/rider.png"
+                src="/images/rider3.png"
                 alt="delivery man"
                 fill
                 sizes="(max-width: 640px) 300px,
                       (max-width: 768px) 340px,
                       (max-width: 1024px) 420px,
                       720px"
-                className="object-contain z-20 drop-shadow-[0_0_20px_#166534] animate-float"
+                className="object-contain p-6 md:p-10 lg:p-4 z-20 drop-shadow-[0_0_20px_#166534] animate-float"
                 priority
               />
 
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2 }}
-                className="absolute bottom-[30%] left-[18%] sm:left-[16%]"
+                className="absolute top-[50%] left-[10%]"
               >
                 <Image
                   src="/images/pin2.svg"
@@ -109,7 +114,7 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2, delay: 0.3 }}
-                className="absolute top-[20%] right-[28%]"
+                className="absolute top-[16%] right-[22%]"
               >
                 <Image
                   src="/images/pin.svg"
@@ -123,7 +128,7 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
-                className="absolute top-[48%] right-[10%]"
+                className="absolute top-[52%] right-[6%]"
               >
                 <Image
                   src="/images/pin2.svg"
@@ -135,6 +140,7 @@ const Hero = () => {
               </motion.div>
 
             </div>
+
           </motion.div>
 
         </motion.div>

@@ -24,7 +24,7 @@ const About = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={container}
     >
-      <motion.h1 variants={section} className="text-3xl md:text-4xl font-bold text-[#166534] mb-8 text-center mt-8">
+      <motion.h1 variants={section} className="text-2xl md:text-4xl font-bold text-[#166534] mb-8 text-center mt-8">
         About Vee's Logistics
       </motion.h1>
 
