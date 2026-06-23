@@ -6,7 +6,7 @@ import About from "../components/landing/About"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full">
       <Navbar />
       <Hero />
       <div className="md:pt-24 px-12 ">

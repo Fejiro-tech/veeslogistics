@@ -8,7 +8,7 @@ const Navbar = ({ type = "user" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 right-0 z-50">
+    <nav className="w-full fixed top-0 right-0 z-50 ">
       
       <div className={`flex justify-between items-center py-2 px-4  lg:px-12 rounded 
         ${type === "user" ? "bg-white text-[#166534] border-b border-[#166534]" : ""}`}>
